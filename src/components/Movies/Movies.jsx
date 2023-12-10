@@ -8,7 +8,8 @@ const Movies = () => {
   const [query, setQuery] = useState('');
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [searchParams, setSearchParams] = useSearchParams(); // Hook to read and write the query string
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchSubmitted, setSearchSubmitted] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -19,9 +20,10 @@ const Movies = () => {
     }
   }, [searchParams]);
 
-  const fetchMovies = async (query) => {
+  const fetchMovies = async query => {
     setIsLoading(true);
     try {
+      setSearchSubmitted(true);
       const data = await searchMovies(query);
       setMovies(data.results);
     } catch (error) {
@@ -34,7 +36,7 @@ const Movies = () => {
   const handleSearch = async event => {
     event.preventDefault();
     if (!query) return;
-    setSearchParams({ query }); // Update the URL with the search query
+    setSearchParams({ query });
     await fetchMovies(query);
   };
 
@@ -55,18 +57,24 @@ const Movies = () => {
         {isLoading ? (
           <p>Loading...</p>
         ) : (
-          <ul className={styles.movieList}>
-            {movies.map(movie => (
-              <li key={movie.id} className={styles.movieItem}>
-                <span
-                  className={styles.movieLink}
-                  onClick={() => navigate(`/movies/${movie.id}`)}
-                >
-                  {movie.title}
-                </span>
-              </li>
-            ))}
-          </ul>
+          <>
+            {movies.length > 0 ? (
+              <ul className={styles.movieList}>
+                {movies.map(movie => (
+                  <li key={movie.id} className={styles.movieItem}>
+                    <span
+                      className={styles.movieLink}
+                      onClick={() => navigate(`/movies/${movie.id}`)}
+                    >
+                      {movie.title}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              searchSubmitted && <p>No movies found.</p>
+            )}
+          </>
         )}
       </div>
     </>

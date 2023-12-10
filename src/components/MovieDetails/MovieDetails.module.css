@@ -1,3 +1,10 @@
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  padding-top: 100px;
+}
+
 .movieDetails {
   display: flex;
   flex-direction: column;
