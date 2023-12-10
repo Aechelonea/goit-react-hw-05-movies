@@ -1,0 +1,35 @@
+.castContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 180px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cardBody {
+  padding: 10px;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.cardText {
+  font-size: 0.875rem;
+  color: #555;
+}

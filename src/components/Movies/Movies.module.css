@@ -1,0 +1,66 @@
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  padding-top: 120px;
+}
+
+.searchForm {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.searchForm input[type='text'] {
+  border: none;
+  padding: 10px;
+  flex-grow: 1;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.searchForm input[type='text']:focus {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.searchForm button {
+  padding: 10px 20px;
+  background-color: #0275d8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.searchForm button:hover {
+  background-color: #0056b3;
+}
+
+.movieList {
+  list-style: none;
+  padding: 0;
+}
+
+.movieItem {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.movieItem:hover {
+  background-color: #e9ecef;
+}
+
+.movieLink {
+  cursor: pointer;
+  color: #0275d8;
+  text-decoration: none;
+}
+
+.movieLink:hover {
+  text-decoration: underline;
+}

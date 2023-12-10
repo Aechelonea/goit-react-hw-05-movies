@@ -1,0 +1,51 @@
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 60px;
+  max-width: 800px;
+}
+
+.nav {
+  background-color: #f3f3f3;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navItem {
+  margin: 0 10px;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.navItem a:hover {
+  color: #0275d8;
+}
+
+.movieList {
+  list-style: none;
+  padding: 0;
+}
+
+.movieItem {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.movieItem:hover {
+  background-color: #e9ecef;
+}

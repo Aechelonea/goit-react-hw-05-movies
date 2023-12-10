@@ -1,0 +1,87 @@
+.movieDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  width: 90%;
+}
+
+.movieHeader {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.moviePoster {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
+.movieSummary {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.movieTitle {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.userScore {
+  font-size: 1.5rem;
+  color: #f5c518;
+  margin-bottom: 1rem;
+}
+
+.genres {
+  font-size: 1.2rem;
+  color: #555;
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+.additionalInfo {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: auto;
+}
+
+.infoLink {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: none;
+  text-decoration: none;
+  color: #0275d8;
+  font-size: 1.1rem;
+  background-color: transparent;
+  transition: color 0.3s ease;
+}
+
+.infoLink:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.goBack {
+  margin: 10px;
+  padding: 5px 10px;
+  background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.goBack:hover {
+  background-color: #e9ecef;
+}
